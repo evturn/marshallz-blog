@@ -30,3 +30,23 @@ exports.getEntries = function(req, res) {
 		res.json(entry);
 	});
 };
+
+exports.putEntry = function(req, res) {
+  Entry.update({userId: req.user._id, _id: req.params.entry_id},
+  {title: req.body.title}, 
+  {body: req.body.body}, 
+  function(err, num, raw) {
+    if (err)
+      res.send(err);
+    res.json({message: num + ' updated'});
+  });
+};
+
+exports.deleteEntry = function(req, res) {
+  Entry.remove({userId: req.user._id, _id: req.params.entry_id}, 
+  function(err) {
+    if (err)
+      res.send(err);
+    res.json({message: 'Entry deleted!'});
+  });
+};
