@@ -10,6 +10,6 @@ body {
 	margin-top: 0px;
 }
 
-.navbar {
-	height: 115px;
+li {
+	list-style: none;
 }
