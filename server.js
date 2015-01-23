@@ -4,7 +4,7 @@ var path 			 = require('path');
 var logger 		 = require('morgan');
 var bodyParser = require('body-parser');
 var Entry 		 = require('./models/entry');
-var User 		 = require('./models/users');
+var User 		 	 = require('./models/user');
 var entryController = require('./controllers/entry');
 var userController = require('./controllers/user');
 

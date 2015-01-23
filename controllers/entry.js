@@ -1,4 +1,4 @@
-var Entry = require('../models/entries');
+var Entry = require('../models/entry');
 
 exports.postEntries = function(req, res) {
 	var entry = Entry();
@@ -22,7 +22,7 @@ exports.getEntries = function(req, res) {
 	});
 };
 
-exports.getEntries = function(req, res) {
+exports.getEntry = function(req, res) {
 	Entry.findById({userId: req.user._id, _id: req.params.entry_id}, 
 	function(err, entry) {
 		if (err)
