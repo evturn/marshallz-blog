@@ -4,7 +4,9 @@ var path 			 = require('path');
 var logger 		 = require('morgan');
 var bodyParser = require('body-parser');
 var Entry 		 = require('./models/entry');
-var entryController = requre('./controllers/entry');
+var User 		 = require('./models/users');
+var entryController = require('./controllers/entry');
+var userController = require('./controllers/user');
 
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
 
@@ -33,6 +35,10 @@ router.route('/entries/:entry_id')
 	.get(entryController.getEntry)
 	.put(entryController.putEntry)
 	.delete(entryController.deleteEntry);
+
+router.route('/users')
+	.post(userController.postUsers)
+	.get(userController.getUsers);
 
 
 app.use('/api', router);
