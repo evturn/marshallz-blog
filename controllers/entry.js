@@ -13,8 +13,7 @@ exports.postEntries = function(req, res) {
 };
 
 exports.getEntries = function(req, res) {
-	Entry.find({userId: req.user._id}, 
-	function(err, entries) {
+	Entry.find(function(err, entries) {
 		if (err)
 			res.send(err);
 		res.json(entries);
