@@ -1,7 +1,7 @@
 var express 	 = require('express'),
-		path 			 = require('path'),
-		logger 		 = require('morgan'),
-		bodyParser = require('body-parser');
+var path 			 = require('path'),
+var logger 		 = require('morgan'),
+var bodyParser = require('body-parser');
 
 var app = express();
 app.use(express.static('public'));
