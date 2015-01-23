@@ -1,1 +1,1 @@
-![Alt text](https://raw.githubusercontent.com/evturn/alculator-node/master/public/images/bg.jpg)
+![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/bg.jpg)
