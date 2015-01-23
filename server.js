@@ -22,7 +22,6 @@ router.get('/', function(require, response) {
 });
 
 
-
 var entriesRoute = router.route('/entries');
 
 entriesRoute.post(function(req, res) {
@@ -35,12 +34,42 @@ entriesRoute.post(function(req, res) {
 		res.json({message: 'Entry successfully posted!', data: entry});
 	});
 });
-
 entriesRoute.get(function(req, res) {
 	Entry.find(function(err, entries) {
 		if (err)
 			res.send(err);
 		res.json(entries);
+	});
+});
+
+
+var entryRoute = router.route('/entries/:entry_id');
+
+entryRoute.get(function(req, res) {
+	Entry.findById(req.params.entry_id, function(err, entry) {
+		if (err)
+			res.send(err);
+		res.json(entry);
+	});
+});
+entryRoute.put(function(req, res) {
+	Entry.findById(req.params.entry_id, function(err, beer) {
+		if (err)
+			res.send(err);
+		entry.title = req.body.title;
+		entry.body = req.body.body;
+		entry.save(function(err) {
+			if (err)
+				res.send(err)
+			res.json(entry);
+		});
+	});
+});
+entryRoute.delete(function(req, res) {
+	Entry.findByIdAndRemove(req.params.entry_id, function(err) {
+		if (err)
+			res.send(err);
+		res.json({message: 'Post removed!'});
 	});
 });
 
