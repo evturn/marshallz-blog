@@ -1,12 +1,12 @@
-var express 	 = require('express');
-var mongoose   = require('mongoose');
-var path 			 = require('path');
-var logger 		 = require('morgan');
-var bodyParser = require('body-parser');
+var express 				= require('express');
+var mongoose   			= require('mongoose');
+var bodyParser 			= require('body-parser');
 var entryController = require('./controllers/entry');
-var userController = require('./controllers/user');
-var passport = require('passport');
-var authController = require('./controllers/auth');
+var userController  = require('./controllers/user');
+var passport 				= require('passport');
+var authController 	= require('./controllers/auth');
+var path 			 			= require('path');
+var logger 		 			= require('morgan');
 
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
 var app = express();
@@ -40,6 +40,5 @@ router.route('/users')
 app.use('/api', router);
 
 var port = process.env.PORT || 3000;
-app.listen(port, function() {
-	console.log('Listening on localhost:3000');
-});
+app.listen(port);
+console.log('Listening on port ' + port);
