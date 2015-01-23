@@ -5,4 +5,3 @@ var Entries = Backbone.Collection.extend({
 		this.fetch({reset: true});
 	}
 });
-
