@@ -4,7 +4,6 @@ exports.postEntries = function(req, res) {
 	var entry = Entry();
 	entry.title = req.body.title;
 	entry.body = req.body.body;
-	entry.updated = req.updated.body;
 	entry.userId = req.user._id;
 	entry.save(function(err) {
 	if (err)

@@ -24,17 +24,17 @@ router.get('/', function(require, response) {
 
 
 router.route('/entries')
-	.post(entryController.postEntries)
-	.get(entryController.getEntries);
+	.post(authController.isAuthenticated, entryController.postEntries)
+	.get(authController.isAuthenticated, entryController.getEntries);
 
 router.route('/entries/:entry_id')
-	.get(entryController.getEntry)
-	.put(entryController.putEntry)
-	.delete(entryController.deleteEntry);
+	.get(authController.isAuthenticated, entryController.getEntry)
+	.put(authController.isAuthenticated, entryController.putEntry)
+	.delete(authController.isAuthenticated, entryController.deleteEntry);
 
 router.route('/users')
 	.post(userController.postUsers)
-	.get(userController.getUsers);
+	.get(authController.isAuthenticated, userController.getUsers);
 
 
 app.use('/api', router);
