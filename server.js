@@ -36,6 +36,14 @@ entriesRoute.post(function(req, res) {
 	});
 });
 
+entriesRoute.get(function(req, res) {
+	Entry.find(function(err, entries) {
+		if (err)
+			res.send(err);
+		res.json(entries);
+	});
+});
+
 
 app.use('/api', router);
 
