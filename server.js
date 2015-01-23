@@ -21,6 +21,8 @@ router.get('/', function(require, response) {
 	response.render('index.html');
 });
 
+var entriesRoute = router.route('/entries');
+
 
 app.listen(port, function() {
 	console.log('Listening on localhost:3000');
