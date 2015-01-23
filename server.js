@@ -3,6 +3,7 @@ var mongoose   = require('mongoose');
 var path 			 = require('path');
 var logger 		 = require('morgan');
 var bodyParser = require('body-parser');
+var Entry 		 = require('/models/entry');
 
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
 
