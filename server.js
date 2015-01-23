@@ -53,7 +53,7 @@ entryRoute.get(function(req, res) {
 	});
 });
 entryRoute.put(function(req, res) {
-	Entry.findById(req.params.entry_id, function(err, beer) {
+	Entry.findById(req.params.entry_id, function(err, entry) {
 		if (err)
 			res.send(err);
 		entry.title = req.body.title;
