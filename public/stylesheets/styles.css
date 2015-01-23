@@ -17,3 +17,7 @@ li {
 p {
 	text-align: justify;
 }
+
+.nav {
+	background-image: url('../images/bg.jpg');
+}
