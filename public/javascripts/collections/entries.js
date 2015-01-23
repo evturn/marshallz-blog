@@ -3,6 +3,6 @@ var Entries = Backbone.Collection.extend({
 	url: '/api/entries',
 	initialize: function() {
 		this.fetch({reset: true});
-		console.log(this);
 	}
 });
+

@@ -5,43 +5,31 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
 	<link href='http://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
 </head>
 <body>
 	
 <div class="container-fluid">
 	<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-  	<ul class="nav nav-pills">
-			<li>
-				<h1 class="page-header signature" >MARSHALLZ bl0G</h1>
-			</li>
-			<li>
-  			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">POSTS<span class="caret"></span>
-    		</a>
-    		<ul class="dropdown-menu" role="menu">
-					<li><a href="#">Marshall</a></li>
-					<li><a href="#">Bad Day Marshall</a></li>
-					<li><a href="#">Marshallz Friendz</a></li>
-				</ul>
-			</li>
-	</ul>
-  </div>
-</nav>
+			<h1 class="page-header signature" >MARSHALLZ bl0G</h1>
+		<div class="container">
+			<ul class="nav nav-pills">
+				<li><a class="btn btn-default" href="#">BUTTON</a></li>
+				<li><a class="btn btn-default" href="#">BUTTON</a></li>
+				<li><a class="btn btn-default" href="#">BUTTON</a></li>
+				<li><a class="btn btn-default" href="#">BUTTON</a></li>
+			</ul>
+		</div>
 </div>
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-12">
-			<ul id="entries"></ul>
-		</div>
+		<div class="col-sm-12" id="blog-entries"></div>
 	</div>
 </div>
 
-
-	
-	<script type="text/template" id="entry-view-template">
+	<script type="text/template" id="entry-template">
 		<div class="col-sm-12">
 			<h3 class="signature"><%= title %></h3>
 			<p><%= body %></p>
@@ -57,6 +45,7 @@
 	<script src="javascripts/models/entry.js"></script>
 	<script src="javascripts/collections/entries.js"></script>
 	<script src="javascripts/views/entryView.js"></script>
+	<script src="javascripts/views/entriesView.js"></script>
 	<script src="javascripts/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,15 @@
 body {
-	padding-top: 70px;
+	padding-top: 100px;
+	text-align: center;
 }
 
 .signature {
 	font-family: 'Monofett', cursive;
+	text-align: center;
+	font-size: 40px;
+	margin-top: 0px;
+}
+
+.navbar {
+	height: 115px;
 }
