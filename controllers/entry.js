@@ -21,7 +21,7 @@ exports.getEntries = function(req, res) {
 };
 
 exports.getEntry = function(req, res) {
-	Entry.findById({userId: req.user._id, _id: req.params.entry_id}, 
+	Entry.findById({_id: req.params.entry_id}, 
 	function(err, entry) {
 		if (err)
 			res.send(err);
@@ -41,7 +41,7 @@ exports.putEntry = function(req, res) {
 };
 
 exports.deleteEntry = function(req, res) {
-  Entry.remove({userId: req.user._id, _id: req.params.entry_id}, 
+  Entry.remove({_id: req.params.entry_id}, 
   function(err) {
     if (err)
       res.send(err);
