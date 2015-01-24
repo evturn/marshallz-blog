@@ -1,6 +1,14 @@
 body {
-	padding-top: 100px;
-	text-align: center;
+	padding-top: 150px;
+}
+
+.avatar {
+	max-width: 70px;
+	border-radius: 50%;
+}
+
+.entry {
+	padding-bottom: 30px;
 }
 
 .signature {
@@ -9,6 +17,7 @@ body {
 	font-size: 40px;
 	margin-top: 0px;
 }
+	
 
 li {
 	list-style: none;

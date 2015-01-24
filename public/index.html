@@ -11,27 +11,37 @@
 	<link href='http://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="container-fluid">
-	<nav class="navbar navbar-fixed-top">
+
+<nav class="navbar navbar-fixed-top">
+	<ul class="nav nav-tabs">
 		<div class="container">
-			<ul class="nav nav-tabs">
-				<li><h1 class="page-header signature" >MARSHALLZ bl0G</h1></li>
-				<li><a href="#">Create Account</a></li>
-				<li><a href="#">Log In</a></li>
-			</ul>
+			<li><h1 class="page-header signature" >MARSHALLZ bl0G</h1></li>
 		</div>
-	</nav>
-</div>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-sm-12" id="blog-entries"></div>
-	</div>
-</div>
+	</ul>
+</nav>
+
+<div class="container" id="blog-entries"></div>
+
+
 
 <script type="text/template" id="entry-template">
-	<div class="col-sm-10 col-sm-offset-1">
-		<h3><%= title %></h3>
-		<p><%= body %></p><sub><%= updated %></sub>
+	<div class="row entry">
+		<div class="four columns offset-by-three alpha">
+			<h2><%= title %></h2>
+		</div>
+		<div class="two columns omega">
+			<img class="avatar" src="images/marshall.jpeg">
+		</div>
+	</div>
+	<div class="row">
+		<div class="four columns offset-by-three">
+			<p><%= body %></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="four columns offset-by-three">
+			<sub><%= updated %></sub>
+		</div>	
 	</div>
 </script>
 	<script src="javascripts/lib/jquery.js"></script>
