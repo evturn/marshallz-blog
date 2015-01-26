@@ -16,7 +16,6 @@ body {
 	text-align: center;
 	margin-top: 0px;
 }
-	
 
 li {
 	list-style: none;
@@ -26,6 +25,6 @@ p {
 	text-align: justify;
 }
 
-.nav {
+.jumbotron {
 	background-image: url('../images/bg.jpg');
 }
