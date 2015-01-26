@@ -8,6 +8,7 @@ var authController 	= require('./controllers/auth');
 var path 			 			= require('path');
 var logger 		 			= require('morgan');
 
+
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
 var app = express();
 app.use(express.static('public'));
@@ -15,8 +16,8 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(passport.initialize());
-
 var router = express.Router();
+app.set('view engine', 'ejs');
 
 router.get('/', function(require, response) {
 	response.render('index.html');
