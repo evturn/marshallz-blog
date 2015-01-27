@@ -12,22 +12,22 @@ var app = express();
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
 
 var handlebars = require('express3-handlebars').create({ defaultLayout:'main' });
-
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.use(express.static(__dirname + '/public'));
+app.set('port', process.env.PORT || 3000);
+app.use(express.static(__dirname + '/public'))
 
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(passport.initialize());
 
-var router = express.Router();
 
-router.get('/', function(require, response) {
+app.get('/', function(require, response) {
 	response.render('index');
 });
 
+var router = express.Router();
 
 router.route('/entries')
 	.post(authController.isAuthenticated, entryController.postEntries)
@@ -56,6 +56,6 @@ app.use(function(err, req, res, next) {
 	res.render('500');
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port);
-console.log('Listening on port ' + port);
+app.listen(app.get('port'), function() {
+	console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate');
+});

@@ -1,30 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en">	
+	<head>
 	<meta charset="UTF-8">
-	<title>Meadowlark Travel</title>
-	{{#if showTests}}
-		<link rel="stylesheet" href="/vendor/mocha.css">
-	{{/if}}
-	<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+	<title>MARSHALLZ BLOG</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
 </head>
-<body>
-	<header><img src="/img/logo.png" alt="Meadowlark Travel Logo"></header>
-	{{{body}}}
+<body class="container">
 
-	{{#if showTests}}
-					<div id="mocha"></div>
-					<script src="/vendor/mocha.js"></script>
-					<script src="/vendor/chai.js"></script>
-					<script>		
-									mocha.ui('tdd');
-									var assert = chai.assert;
-					</script>
-					<script src="/qa/tests-global.js"></script>
-					{{#if pageTestScript}}
-									<script src="{{pageTestScript}}"></script>
-					{{/if}}
-					<script>mocha.run();</script>
-	{{/if}}
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://evturn.com">
+          <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li role="presentation" class="active"><a href="/">Home</a></li>
+      <li role="presentation"><a href="/about">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+{{{body}}}
+
+	<script src="javascripts/lib/jquery.js"></script>
+	<script src="javascripts/lib/underscore.js"></script>
+	<script src="javascripts/lib/backbone.js"></script>
+	<script src="javascripts/lib/bootstrap.js"></script>
+	<script src="javascripts/models/entry.js"></script>
+	<script src="javascripts/collections/entries.js"></script>
+	<script src="javascripts/views/entryView.js"></script>
+	<script src="javascripts/views/entriesView.js"></script>
+	<script src="javascripts/main.js"></script>
 </body>
 </html>
