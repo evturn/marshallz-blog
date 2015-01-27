@@ -8,9 +8,15 @@ var authController 	= require('./controllers/auth');
 var path 			 			= require('path');
 var logger 		 			= require('morgan');
 
-mongoose.connect('mongodb://localhost:27017/marshallz-blog');
 var app = express();
-app.use(express.static('public'));
+mongoose.connect('mongodb://localhost:27017/marshallz-blog');
+
+var handlebars = require('express3-handlebars').create({ defaultLayout:'main' });
+
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
