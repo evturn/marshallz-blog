@@ -25,7 +25,7 @@ app.use(passport.initialize());
 var router = express.Router();
 
 router.get('/', function(require, response) {
-	response.render('index.html');
+	response.render('index');
 });
 
 
@@ -44,6 +44,17 @@ router.route('/users')
 
 
 app.use('/api', router);
+
+app.use(function(req, res) {
+	res.status(404);
+	res.render('404');
+});
+
+app.use(function(err, req, res, next) {
+	console.error(err.stack);
+	res.status(500);
+	res.render('500');
+});
 
 var port = process.env.PORT || 3000;
 app.listen(port);
