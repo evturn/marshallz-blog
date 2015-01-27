@@ -2,16 +2,16 @@
 	<div class="jumbotron">
 		<h1 class="signature"> MARSHALLZ BLOG</h1>
 	</div>
-	<div class="container nine columns alpha" id="blog-entries"></div>
+	<div class="row twelve columns" id="blog-entries"></div>
 </main>
 
 <script type="text/template" id="entry-template">
 	<div class="row entry">
-		<div class="seven columns alpha">
-			<h2><%= title %></h2>
-		</div>
-		<div class="two columns omega">
+		<div class="one column alpha">
 			<img class="avatar" src="images/marshall_a.jpg">
+		</div>
+		<div class="five columns omega">
+			<h2><%= title %></h2>
 		</div>
 	</div>
 	<div class="row">
@@ -31,12 +31,3 @@
 		</div>	
 	</div>
 </script>
-
-<div class="three columns omega">
-	<h5>Log-in</h5>
-	<form>
-		<input type="text" name="name" placeholder="Username">
-		<input type="password" name="password" placeholder="Password">
-		<input type="submit" value="&#9728;">
-	</form>
-<div>
