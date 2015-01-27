@@ -23,7 +23,7 @@ li {
 }
 
 .entry-title {
-	text-align: right;
+	float: right;
 }
 
 p {

@@ -6,22 +6,23 @@
 		<ul id="blog-entries"></ul>
 	</div>
 	<div class="col-xs-12 col-sm-3 well well-large">
-		<h4>Marshallz Corner</h4>
+		<h3 align="right">Marshallz Corner</h3>
+		<h4 align="right">Marshallz Corner</h4>
+		<h5 align="right">Marshallz Corner</h5>
+		<h6 align="right">Marshallz Corner</h6>
 	</div>
 </main>
 
 <script type="text/template" id="entry-template">
 <div class="row">
-	<div class="col-xs-3 col-sm-3">
-		<img class="avatar" src="images/marshall_a.jpg">
-	</div>
-	<div class="col-xs-9 col-sm-9">
-		<h2 class="entry-title"><%= title %></h2>
+	<div class="col-xs-12 col-sm-12">
+		<img class="post avatar" src="images/marshall_a.jpg">
+		<h1 class="post entry-title"><%= title %></h1>
 	</div>
 </div>
 
 <div class="row">
-	<div class="col-xs-11 col-sm-11">
+	<div class="col-xs-12 col-sm-12">
 		<p><%= body %></p>
 	</div>
 </div>
@@ -32,7 +33,7 @@
 			<a class="post"><input class="btn btn-success btn-md" type="button" value="&#10008;" id="edit-submit"></a>
 		</ul>
 	</div>
-	<div class="col-xs-2">
+	<div class="col-xs-1">
 		<sub><%= updated %></sub> 
 	</div>	
 </div>
