@@ -1,4 +1,6 @@
-
+body {
+	background-image: url('../images/bg.jpg');
+}
 
 .avatar {
 	max-width: 70px;
@@ -6,27 +8,25 @@
 	border: 1px solid grey;
 }
 
-
 .signature {
 	font-family: 'Monofett', cursive;
 	text-align: center;
 	margin-top: 0px;
 }
 
-
 li {
 	list-style: none;
 }
-
 
 .post {
 	display: inline-block;
 }
 
-p {
-	text-align: justify;
+.entry-title {
+	text-align: right;
 }
 
-.jumbotron {
-	background-image: url('../images/bg.jpg');
+p {
+	padding-top: 2%;
+	text-align: justify;
 }
