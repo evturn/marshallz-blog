@@ -1,6 +1,6 @@
 var EntryView = Backbone.View.extend({
 	tagName: 'li',
-	className: 'entry',
+	className: 'entry well well-large',
 	template: _.template($('#entry-template').html()),
 	initialize: function() {
 		this.render();
