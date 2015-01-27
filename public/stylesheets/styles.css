@@ -1,17 +1,11 @@
-body {
-	padding-top: 50px;
-}
+
 
 .avatar {
 	max-width: 70px;
 	border-radius: 10%;
-	border: 1px solid red;
+	border: 1px solid grey;
 }
 
-
-.entry {
-	padding-bottom: 30px;
-}
 
 .signature {
 	font-family: 'Monofett', cursive;
@@ -19,9 +13,11 @@ body {
 	margin-top: 0px;
 }
 
+
 li {
 	list-style: none;
 }
+
 
 .post {
 	display: inline-block;
