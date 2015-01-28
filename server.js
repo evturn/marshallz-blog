@@ -30,6 +30,13 @@ app.get('/', function(require, response) {
 
 
 
+var concatenateAbstracts = function() {
+	console.log(articleAbstracts);
+};
+
+
+articleAbstracts = [];
+
 businessAbstracts = [];
 var businessRequest = function() {
 	businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
@@ -48,7 +55,8 @@ var businessRequest = function() {
 };
 var pickBusiness = function(){
 	threeBusiness = businessAbstracts.slice(1, 4);
-	businessParagraph = threeBusiness.join(' ');
+	articleAbstracts.push(threeBusiness);
+	foodRequest();
 };
 
 foodAbstracts = [];
@@ -69,7 +77,8 @@ var foodRequest = function() {
 };
 var pickFood = function(){
 	threeFood = foodAbstracts.slice(1, 4);
-	foodParagraph = threeFood.join(' ');
+	articleAbstracts.push(threeFood);
+	healthRequest();
 };
 
 healthAbstracts = [];
@@ -90,15 +99,13 @@ var healthRequest = function() {
 }
 var pickHealth = function(){
 	threeHealth = healthAbstracts.slice(1, 4);
-	healthParagraph = threeHealth.join(' ');
-	console.log(healthParagraph);
+	articleAbstracts.push(threeHealth);
+	concatenateAbstracts();
 };
 
-healthRequest();
 
-// var requestArticles = function() {
 
-// };
+businessRequest();
 
 
 var router = express.Router();
