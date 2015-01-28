@@ -35,7 +35,10 @@ request(businessSection, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
 		var responseObject = (JSON.parse(body));
 		var articleArr     = responseObject.results
-		console.log('articleArr', articleArr);
+		articleArr.forEach(function(article) {
+			console.log(article.abstract);
+		});
+
 	} else {
 		throw err;
 	}
