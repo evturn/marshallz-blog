@@ -37,14 +37,15 @@ request(businessSection, function(err, response, body) {
 		articleArr.forEach(function(article) {
 			businessAbstracts.push(article.abstract);
 		});
-	pickFive();
+	pickThree();
 	} else {
 		throw err;
 	};
 });
 
-var pickFive = function(){
-	fiveSentences = businessAbstracts[Math.floor(Math.random()*businessAbstracts.length)];
+var pickThree = function(){
+	threeBusiness = businessAbstracts.slice(1, 4);
+	paragraph = threeBusiness.join(' ');
 };
 
 
