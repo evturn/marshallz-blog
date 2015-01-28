@@ -7,5 +7,5 @@ Being that I never personally used the original version of this blog, I decided 
 Once a user creates an account they are granted access to tools that allow them to create new posts as well as edit or delete any of their published entries. I am revisting this project and rebuilding it with Node and Express, Backbone, and MongoDB. In addition, for anyone wanting to leave comments on these posts they can do so by signing in with their Facebook account.
 ![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/blob.gif)
 ##Original
-Originally built this blog in Sinatra. User authentication implemented using bcrypt's hash algorithm and PostgreSQL to store encrypted passwords.
+Originally built in Sinatra. User authentication implemented using bcrypt's hash algorithm and PostgreSQL to store encrypted passwords.
 ![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/bg.jpg)
