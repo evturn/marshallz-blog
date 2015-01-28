@@ -32,13 +32,13 @@ app.get('/', function(require, response) {
 businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
 
 request(businessSection, function(err, response, body) {
-		if(!err && response.statusCode === 200) {
-			var responseObject = (JSON.parse(body));
-			var articleArr     = responseObject.results
-			console.log('articleArr', articleArr);
-		} else {
-			throw err;
-		}
+	if(!err && response.statusCode === 200) {
+		var responseObject = (JSON.parse(body));
+		var articleArr     = responseObject.results
+		console.log('articleArr', articleArr);
+	} else {
+		throw err;
+	}
 });
 
 
