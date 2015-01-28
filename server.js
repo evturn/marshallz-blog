@@ -7,6 +7,7 @@ var passport 				= require('passport');
 var authController 	= require('./controllers/auth');
 var path 			 			= require('path');
 var logger 		 			= require('morgan');
+var request					= require('request');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
@@ -26,6 +27,21 @@ app.use(passport.initialize());
 app.get('/', function(require, response) {
 	response.render('index');
 });
+
+
+businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
+
+request(businessSection, function(err, response, body) {
+		if(!err && response.statusCode === 200) {
+			var responseObject = (JSON.parse(body));
+			var articleArr     = responseObject.results
+			console.log('articleArr', articleArr);
+		} else {
+			throw err;
+		}
+});
+
+
 
 var router = express.Router();
 
