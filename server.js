@@ -28,7 +28,7 @@ app.get('/', function(require, response) {
 	response.render('index');
 });
 
-var businessAbstracts = [];
+businessAbstracts = [];
 businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
 request(businessSection, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
@@ -37,10 +37,15 @@ request(businessSection, function(err, response, body) {
 		articleArr.forEach(function(article) {
 			businessAbstracts.push(article.abstract);
 		});
+	pickFive();
 	} else {
 		throw err;
 	};
 });
+
+var pickFive = function(){
+	fiveSentences = businessAbstracts[Math.floor(Math.random()*businessAbstracts.length)];
+};
 
 
 
