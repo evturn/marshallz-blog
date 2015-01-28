@@ -28,31 +28,6 @@ app.get('/', function(require, response) {
 });
 
 
-
-
-var entryContent = function() {
-	newEntry = sentenceArr.join(' ');
-	console.log(newEntry);
-};
-
-sentenceArr = [];
-
-var concatenateAbstracts = function() {
-	category1 = articleAbstracts[0];
-	category2 = articleAbstracts[1];
-	category3 = articleAbstracts[2];
-	sentence1 = category1[0]
-	sentenceArr.push(sentence1)
-	sentence2 = category2[0]
-	sentenceArr.push(sentence2)
-	sentence3 = category3[0]
-	sentenceArr.push(sentence3)
-	entryContent();
-};
-
-
-articleAbstracts = [];
-
 businessAbstracts = [];
 var businessRequest = function() {
 	businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
@@ -68,11 +43,6 @@ var businessRequest = function() {
 			throw err;
 		};
 });
-};
-var pickBusiness = function(){
-	threeBusiness = businessAbstracts.slice(1, 4);
-	articleAbstracts.push(threeBusiness);
-	foodRequest();
 };
 
 foodAbstracts = [];
@@ -91,11 +61,6 @@ var foodRequest = function() {
 		};
 	});
 };
-var pickFood = function(){
-	threeFood = foodAbstracts.slice(1, 4);
-	articleAbstracts.push(threeFood);
-	healthRequest();
-};
 
 healthAbstracts = [];
 var healthRequest = function() {
@@ -113,14 +78,45 @@ var healthRequest = function() {
 		};
 	});
 }
+
+var entryContent = function() {
+	newEntry = sentenceArr.join(' ');
+	console.log(newEntry);
+	//Value of body for new entry
+};
+
+sentenceArr = [];
+var concatenateAbstracts = function() {
+	category1 = articleAbstracts[0];
+	category2 = articleAbstracts[1];
+	category3 = articleAbstracts[2];
+	sentence1 = category1[0]
+	sentenceArr.push(sentence1)
+	sentence2 = category2[0]
+	sentenceArr.push(sentence2)
+	sentence3 = category3[0]
+	sentenceArr.push(sentence3)
+	entryContent();
+};
+
+articleAbstracts = [];
+var pickBusiness = function(){
+	threeBusiness = businessAbstracts.slice(1, 4);
+	articleAbstracts.push(threeBusiness);
+	foodRequest();
+};
+var pickFood = function(){
+	threeFood = foodAbstracts.slice(1, 4);
+	articleAbstracts.push(threeFood);
+	healthRequest();
+};
 var pickHealth = function(){
 	threeHealth = healthAbstracts.slice(1, 4);
 	articleAbstracts.push(threeHealth);
 	concatenateAbstracts();
 };
 
-
-
+//GET request to NYT
 businessRequest();
 
 
