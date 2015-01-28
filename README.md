@@ -1,5 +1,5 @@
 #MARSHALLZ BLOG
-[Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/marshallz1.png)
+![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/marshallz1.png)
 ##About
 Being that I never personally used the original version of this blog, I decided to write tasks that APIs such as the New York Times to select sentences at random from various recent articles. These sentences are then combined to create new, nonsensical blog posts which are authored by a fictious nine year old user. 
 
