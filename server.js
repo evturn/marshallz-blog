@@ -30,8 +30,24 @@ app.get('/', function(require, response) {
 
 
 
+var entryContent = function() {
+	newEntry = sentenceArr.join(' ');
+	console.log(newEntry);
+};
+
+sentenceArr = [];
+
 var concatenateAbstracts = function() {
-	console.log(articleAbstracts);
+	category1 = articleAbstracts[0];
+	category2 = articleAbstracts[1];
+	category3 = articleAbstracts[2];
+	sentence1 = category1[0]
+	sentenceArr.push(sentence1)
+	sentence2 = category2[0]
+	sentenceArr.push(sentence2)
+	sentence3 = category3[0]
+	sentenceArr.push(sentence3)
+	entryContent();
 };
 
 
