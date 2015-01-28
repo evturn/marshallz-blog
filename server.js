@@ -37,16 +37,55 @@ request(businessSection, function(err, response, body) {
 		articleArr.forEach(function(article) {
 			businessAbstracts.push(article.abstract);
 		});
-	pickThree();
+	pickBusiness();
 	} else {
 		throw err;
 	};
 });
-
-var pickThree = function(){
+var pickBusiness = function(){
 	threeBusiness = businessAbstracts.slice(1, 4);
 	paragraph = threeBusiness.join(' ');
 };
+
+foodAbstracts = [];
+foodSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/food/1.json?api-key=' + process.env.NYT_KEY;
+request(foodSection, function(err, response, body) {
+	if(!err && response.statusCode === 200) {
+		var responseObject = (JSON.parse(body));
+		var articleArr     = responseObject.results
+		articleArr.forEach(function(article) {
+			foodAbstracts.push(article.abstract);
+		});
+	pickFood();
+	} else {
+		throw err;
+	};
+});
+var pickFood = function(){
+	threeFood = foodAbstracts.slice(1, 4);
+	foodParagraph = threeFood.join(' ');
+};
+
+healthAbstracts = [];
+healthSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/health/1.json?api-key=' + process.env.NYT_KEY;
+request(healthSection, function(err, response, body) {
+	if(!err && response.statusCode === 200) {
+		var responseObject = (JSON.parse(body));
+		var articleArr     = responseObject.results
+		articleArr.forEach(function(article) {
+			healthAbstracts.push(article.abstract);
+		});
+	pickHealth();
+	} else {
+		throw err;
+	};
+});
+var pickHealth = function(){
+	threeHealth = healthAbstracts.slice(1, 4);
+	healthParagraph = threeHealth.join(' ');
+};
+
+
 
 
 
