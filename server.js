@@ -28,20 +28,18 @@ app.get('/', function(require, response) {
 	response.render('index');
 });
 
-
+var businessAbstracts = [];
 businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
-
 request(businessSection, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
 		var responseObject = (JSON.parse(body));
 		var articleArr     = responseObject.results
 		articleArr.forEach(function(article) {
-			console.log(article.abstract);
+			businessAbstracts.push(article.abstract);
 		});
-
 	} else {
 		throw err;
-	}
+	};
 });
 
 
