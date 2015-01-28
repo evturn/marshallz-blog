@@ -23,14 +23,16 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(passport.initialize());
 
-
 app.get('/', function(require, response) {
 	response.render('index');
 });
 
+
+
+
 businessAbstracts = [];
 businessSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/business/1.json?api-key=' + process.env.NYT_KEY;
-request(businessSection, function(err, response, body) {
+var businessRequest = request(businessSection, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
 		var responseObject = (JSON.parse(body));
 		var articleArr     = responseObject.results
@@ -44,12 +46,12 @@ request(businessSection, function(err, response, body) {
 });
 var pickBusiness = function(){
 	threeBusiness = businessAbstracts.slice(1, 4);
-	paragraph = threeBusiness.join(' ');
+	businessParagraph = threeBusiness.join(' ');
 };
 
 foodAbstracts = [];
 foodSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/food/1.json?api-key=' + process.env.NYT_KEY;
-request(foodSection, function(err, response, body) {
+var foodRequest = request(foodSection, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
 		var responseObject = (JSON.parse(body));
 		var articleArr     = responseObject.results
@@ -67,6 +69,7 @@ var pickFood = function(){
 };
 
 healthAbstracts = [];
+var healthRequest = function() {
 healthSection = 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/health/1.json?api-key=' + process.env.NYT_KEY;
 request(healthSection, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
@@ -80,13 +83,18 @@ request(healthSection, function(err, response, body) {
 		throw err;
 	};
 });
+}
 var pickHealth = function(){
 	threeHealth = healthAbstracts.slice(1, 4);
 	healthParagraph = threeHealth.join(' ');
+	console.log(healthParagraph);
 };
 
+healthRequest();
 
+// var requestArticles = function() {
 
+// };
 
 
 var router = express.Router();
