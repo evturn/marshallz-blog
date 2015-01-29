@@ -28,8 +28,10 @@ app.get('/', function(require, response) {
 	response.render('index');
 });
 
-app.get('/', function(req, res) {
-	res.render('latest')
+app.get('/latest', function(req, res) {
+	res.render('latest', {
+		entry: newEntry.createContent() 
+	});
 });
 
 
