@@ -8,4 +8,4 @@ Once a user creates an account they are granted access to tools that allow them 
 ![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/blob.gif)
 ##Original
 Originally built in Sinatra. User authentication implemented using bcrypt's hash algorithm and PostgreSQL to store encrypted passwords.
-![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/bg.jpg)
+![Alt text](https://raw.githubusercontent.com/evturn/marshallz-blog-node/master/public/images/marshallz-bg.jpg)
