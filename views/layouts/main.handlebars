@@ -17,24 +17,30 @@
 	<link rel="alternate" type="application/rss+xml" title="Minimal Theme" href="/rss/">
 	<link rel="canonical" href="http://minimalv2-ghost1235.rhcloud.com/" />
 </head>
-<body style ="background-image:url('images/bg.jpg');" >
-
-<header id="site-head" style="background-image: url('images/headbg.jpg')">
+<body>
+	<header id="site-head">
     <div class="vertical">
-        <div id="site-head-content" class="inner">
-            <h1 class="blog-title signature">Marshallz Blog</h1>
-            <h2 class="blog-description">Welcome! And more importantly, Welcome to Marshallz Blog
-</h2>
-        </div>
-        
+     <div id="site-head-content" class="inner">
+      <h1 class="blog-title signature">Marshallz Blog</h1>
+      <h2 class="blog-description">Welcome! And more importantly, Welcome to Marshallz Blog</h2>
+     </div>
     </div>
-</header>
-<br/>
-<br/>
-	{{{body}}}
+	</header>
+	<br/>
+	<br/>
+		{{{body}}}
+  <footer class="site-footer">
+      <div class="pagelist">
+      <a href="#">About</a> /
+      <a href="#">Policy</a> /
+      <a href="#">Terms</a> 
+      </div>
+      <div class="inner">
+         <section class="copyright">All content copyright <a href="http://evturn.com">evturn.com</a> &copy; 2013 &bull; All rights reserved.</section>
+      </div>
+  </footer>
 
 	<script src="javascripts/lib/jquery.js"></script>
-  <script src="javascripts/lib/jquery.fitvids.js"></script>
 	<script src="javascripts/lib/underscore.js"></script>
 	<script src="javascripts/lib/backbone.js"></script>
 	<script src="javascripts/lib/bootstrap.js"></script>
@@ -43,18 +49,7 @@
 	<script src="javascripts/views/entryView.js"></script>
 	<script src="javascripts/views/entriesView.js"></script>
 	<script src="javascripts/main.js"></script>
-	<script>
-        $(document).ready(function(){
-            // Target your .container, .wrapper, .post, etc.
-            $(".content").fitVids();
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            // Target your .container, .wrapper, .post, etc.
-            $(".content").fitVids();
-        });
-    </script>
-    <script src="javascripts/lib/pace.js"></script>
+  <script src="javascripts/lib/jquery.fitvids.js"></script>
+  <script src="javascripts/lib/pace.js"></script>
 </body>
 </html>
