@@ -1,15 +1,10 @@
-body {
-	background-image: url('../images/bg-original.jpg');
-}
+
 
 .signature {
 	color: #000;
 	font-family: 'Monofett', cursive;
 }
 
-#site-head {
-	background-image: url('../images/bg.jpg')
-}
 
 li {
 	list-style: none;
