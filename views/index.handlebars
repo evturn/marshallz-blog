@@ -3,28 +3,113 @@
 	<link rel="canonical" href="http://minimalv2-ghost1235.rhcloud.com/welcome-to-ghost-2/" />
 {{/section}}
 
+<main class="content" role="main">
+		<ul id="blog-entries"></ul>
+		<article class="post tag-getting-started">
+<br/>
+
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wakeghost'; // required: replace wakeghost with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+</article>
+
+</main>
+
+    <footer class="site-footer">
+        <div class="pagelist">
+        <a href="#">About</a> /
+        <a href="#">Policy</a> /
+        <a href="#">Terms</a> 
+        </div>
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="/">Minimal Theme</a> &copy; 2013 &bull; All rights reserved.</section>
+
+        </div>
+    </footer>
+	
 <script type="text/template" id="entry-template">
-<div class="row">
-	<div class="col-xs-12 col-sm-12">
-		<img class="post avatar" src="images/useravatar.jpg">
-		<h1 class="post entry-title"><%= title %></h1>
-	</div>
-</div>
+    <article class="post tag-getting-started">
 
-<div class="row">
-	<div class="col-xs-12 col-sm-12">
-		<p><%= body %></p>
-	</div>
-</div>
 
-<div class="row">
-	<div class="col-xs-6">
-			<a class="post"><input class="btn btn-success btn-md" type="button" value="&#9998;" id="edit-submit"></a>
-			<a class="post"><input class="btn btn-success btn-md" type="button" value="&#10008;" id="edit-submit"></a>
-		</ul>
-	</div>
-	<div class="col-xs-1">
-		<sub><%= updated %></sub> 
-	</div>	
-</div>
+
+        
+        
+                            <div align='center'><img class='post-top' src='images/useravatar.jpg'/></div>
+
+        
+        <h1 class="post-title"><%= title %></h1>
+        <div align='center'>
+        <span class="post-meta">
+        Posted On <time datetime="2014-01-15">15 Jan 2014</time> by Mohammed shameer 
+        </span>
+        </div>
+
+        <section class="post-content">
+            <p><%= body %></p>
+
+<h2 id="gettingstarted">Getting Started</h2>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis aute dolor reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+<p><img src="images/headbg.jpg" alt="The Ghost Logo" /></p>
+
+
+
+<p>Sometimes a link isn't enough, you want to quote someone on what they've said. It was probably very wisdomous. Is wisdomous a word? Find out in a future release when we introduce spellcheck! For now - it's definitely a word.</p>
+
+<blockquote>
+  <p>Wisdomous - it's definitely a word.</p>
+</blockquote>
+
+<h3 id="workingwithcode">Working with Code</h3>
+
+<p>Got a streak of geek? We've got you covered there, too. You can write inline <code>&lt;code&gt;</code> blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.</p>
+
+<pre><code>.awesome-thing {
+    display: block;
+    width: 100%;
+}
+</code></pre>
+
+<h3 id="readyforabreak">Ready for a Break?</h3>
+
+<p>Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.</p>
+
+
+
+        </section>
+       
+</article>
+<br/>
+<article class="post tag-getting-started">
+
+        <footer class="post-footer">
+            
+                <section class="author">
+                    <h4>Mohammed shameer</h4>
+                    <img src='images/useravatar.jpg' alt='authorimage'>
+                    <p>I am Mohammed Shameer a web developer and designer from Kerala, India. estigationes demonstraverunt lectores legere me lius quod ii legunt saepius. estigationes demonstraverunt lectores legere</p>
+                </section>
+            
+            
+
+        </footer>
+        
+        </article>
+
+    <br/>
 </script>
+
+
