@@ -1,12 +1,12 @@
-
-
 .signature {
 	color: #000;
 	font-family: 'Monofett', cursive;
 }
 
-
 li {
 	list-style: none;
 }
 
+header h1 {
+	font-size: 5em;
+}

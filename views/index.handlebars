@@ -1,35 +1,25 @@
-
 <main class="content" role="main">
 	<ul id="blog-entries"></ul>
-	<article class="post tag-getting-started">
-	  
-	  <footer class="post-footer">      
-	    <section class="author">
-	      <h4>Marshall</h4>
-	      <img src='images/useravatar.jpg' alt='authorimage'>
-	      <p>The views and opinions are not mine.</p>
-	  	</section>
-	  </footer>      
-  </article>
-  <br/>
 </main>
-	
+
 <script type="text/template" id="entry-template">
-  <article class="post tag-getting-started">
-    <div align='center'>
-    	<img class='post-top' src='images/useravatar.jpg'>
-    </div>    
-    <h1 class="post-title"><%= title %></h1>
-    <div align='center'>
-      <span class="post-meta">
-      	Posted On <time datetime="2014-01-15">15 Jan 2014</time> by Marshall 
-      </span>
-    </div>
-		<section class="post-content">
-	    <p><%= body %></p>
-	  </section>    
+	<article class="post tag-getting-started">
+		<img class='img-left' src='images/useravatar.jpg' alt='authorimage'>
+		<br/>
+	  <header class="post-header">
+	    <h2 class="post-title"><a href="/latest"><%= title %></a></h2>
+			<br/>
+	    <div class="date-box">
+		    <span class="date-outer">
+		    	<span class="date-inner"><time datetime="2014-01-15">29 Jan 2015</time></span>
+	   		</span>
+	  	</div>
+		</header>
+		<section class="post-excerpt">
+	  <br>
+	  	<%= body %>
+	  </section>
+	  <span class="post-meta"> on Getting Started</span>
 	</article>
 	<br/>
 </script>
-
-
