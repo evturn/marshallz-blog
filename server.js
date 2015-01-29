@@ -35,8 +35,6 @@ app.get('/latest', function(req, res) {
 });
 
 
-
-
 var router = express.Router();
 
 router.route('/entries')
@@ -51,7 +49,6 @@ router.route('/entries/:entry_id')
 router.route('/users')
 	.post(userController.postUsers)
 	.get(authController.isAuthenticated, userController.getUsers);
-
 
 app.use('/api', router);
 
