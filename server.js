@@ -8,7 +8,7 @@ var authController 	= require('./controllers/auth');
 var path 			 			= require('path');
 var logger 		 			= require('morgan');
 var request					= require('request');
-var entryBody				= require('./lib/articlesNYT.js');
+var newEntry				= require('./lib/newEntry.js');
 
 var app = express();
 mongoose.connect('mongodb://localhost:27017/marshallz-blog');
@@ -28,6 +28,9 @@ app.get('/', function(require, response) {
 	response.render('index');
 });
 
+app.get('/', function(req, res) {
+	res.render('latest')
+});
 
 
 
