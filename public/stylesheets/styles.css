@@ -1,6 +1,6 @@
-body {
+/*body {
 	background-image: url('../images/bg.jpg');
-}
+}*/
 
 .avatar {
 	max-width: 100px;
@@ -10,23 +10,6 @@ body {
 
 .signature {
 	font-family: 'Monofett', cursive;
-	text-align: center;
-	margin-top: 0px;
 }
 
-li {
-	list-style: none;
-}
 
-.post {
-	display: inline-block;
-}
-
-.entry-title {
-	float: right;
-}
-
-p {
-	padding-top: 2%;
-	text-align: justify;
-}
