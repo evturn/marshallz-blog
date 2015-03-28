@@ -57,7 +57,7 @@ var router = express.Router();
 
 router.route('/entries')
 	.post(authController.isAuthenticated, entryController.postEntries)
-	.get(authController.isAuthenticated, entryController.getEntries);
+	.get(entryController.getEntries);
 
 router.route('/entries/:entry_id')
 	.get(authController.isAuthenticated, entryController.getEntry)
