@@ -11,7 +11,7 @@ var request					= require('request');
 var newEntry				= require('./lib/newEntry.js');
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/marshallz-blog');
+mongoose.connect('mongodb://http://162.243.208.34/marshallz-blog');
 
 var handlebars = require('express3-handlebars').create({
 	  defaultLayout:'main',
