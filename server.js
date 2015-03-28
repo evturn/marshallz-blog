@@ -28,11 +28,6 @@ app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'))
 
-app.use(function(req, res, next) {
-	res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
-	next();
-});
-
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
@@ -82,5 +77,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(app.get('port'), function() {
-	console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate');
+	console.log('Express started on ' + app.get('port') + '; press Ctrl-C to terminate');
 });
