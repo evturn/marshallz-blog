@@ -39,48 +39,18 @@ app.use(bodyParser.urlencoded({
 app.use(passport.initialize());
 
 
-function getWeatherData(){ 
-	return {
-  	locations: [
-			{
-				name: 'New York City',
-				forecastUrl: 'http://www.wunderground.com/US/OR/Manzanita.html',
-				iconUrl: 'http://icons-ak.wxug.com/i/c/k/rain.gif',
-				weather: 'Light Rain',
-				temp: '25.0 F (-4.8 C)',
-			},
-			{
-				name: 'Los Angeles',
-				forecastUrl: 'http://www.wunderground.com/US/OR/Bend.html',
-				iconUrl: 'http://icons-ak.wxug.com/i/c/k/partlycloudy.gif',
-				weather: 'Partly Cloudy',
-				temp: '75.0 F (40.8 C)',
-			},
-      {
-      	name: 'Marshallz Blog',
-        forecastUrl: 'http://www.wunderground.com/US/OR/Portland.html',
-        iconUrl: 'http://icons-ak.wxug.com/i/c/k/sunny.gif',
-        weather: 'Overcast',
-        temp: '137.1 F (80.3 C)',
-			},
-		],
-	};
-}
-
-app.use(function(req, res, next) {
-	if(!res.locals.partials) res.locals.partials = {}; 
-	res.locals.partials.weather = getWeatherData(); 
-	next();
-});
-
-app.get('/', function(require, response) {
+app.get('/list', function(require, response) {
 	response.render('index');
 });
 
-app.get('/latest', function(req, res) {
+app.get('/', function(req, res) {
 	res.render('latest', {
 		entry: newEntry.createContent() 
 	});
+});
+
+app.get('/entries/:id', function(req, res) {
+	res.render('entry');
 });
 
 var router = express.Router();
